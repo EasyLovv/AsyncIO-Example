@@ -1,0 +1,4 @@
+aiohttp==0.17.4
+aiohttp-session=0.2.0
+aioredis==0.2.3
+asyncio=3.4.3
