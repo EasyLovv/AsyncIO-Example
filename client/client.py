@@ -99,7 +99,7 @@ class GameClient(object):
         return resp
 
     def action_decide_add_item(self):
-        if len(self._field) < 20:
+        if len(self._field) < settings.ADD_LIMIT:
             item = self._field.rand_item_add()
             return {
                 'type': 'addItem',
@@ -128,7 +128,7 @@ class GameClient(object):
             return None
 
     def action_decide_remove_item(self):
-        if len(self._field) > 100:
+        if len(self._field) > settings.REMOVE_AFTER:
             item = self._field.rand_item_remove()
             return {
                 'type': 'moveItem',
